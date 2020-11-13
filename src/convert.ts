@@ -1,9 +1,9 @@
-import {data, length, mass, pressure, temperature, time, volume} from './conversions';
+import {data, length, mass, pressure, temperature, time, volume, force} from './conversions';
 import {Unit} from './types/common';
 import {AllUnits, Converter} from './types/units';
 import {invariant, strings} from './util';
 
-const families = [data, length, mass, pressure, temperature, time, volume];
+const families = [data, length, mass, pressure, temperature, time, volume, force];
 
 type OverloadedConverter = ((quantity: number) => Converter<number>) & ((quantity: bigint) => Converter<bigint>);
 
