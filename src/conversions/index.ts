@@ -11,3 +11,4 @@ export {temperature} from './temperature';
 export {time} from './time';
 export {volume} from './volume';
 export {force} from './force';
+export {angle} from './angle';

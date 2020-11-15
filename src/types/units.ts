@@ -1,4 +1,4 @@
-import {data, length, mass, pressure, temperature, time, volume, force} from '../conversions';
+import {data, length, mass, pressure, temperature, time, volume, force, angle} from '../conversions';
 import {ConverterBody, GetAliases} from './common';
 
 export type Data = GetAliases<typeof data>;
@@ -9,8 +9,9 @@ export type Temperature = GetAliases<typeof temperature>;
 export type Time = GetAliases<typeof time>;
 export type Volume = GetAliases<typeof volume>;
 export type Force = GetAliases<typeof force>;
+export type Angle = GetAliases<typeof angle>;
 
-export type AllUnits = Data | Length | Mass | Pressure | Temperature | Time | Volume | Force;
+export type AllUnits = Data | Length | Mass | Pressure | Temperature | Time | Volume | Force | Angle;
 
 export interface Converter<Q> {
 	from(fromUnit: Data): ConverterBody<Data, Q>;
@@ -21,4 +22,5 @@ export interface Converter<Q> {
 	from(fromUnit: Time): ConverterBody<Time, Q>;
 	from(fromUnit: Volume): ConverterBody<Volume, Q>;
 	from(fromUnit: Force): ConverterBody<Force, Q>;
+	from(fromUnit: Angle): ConverterBody<Angle, Q>;
 }

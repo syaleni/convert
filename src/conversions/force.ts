@@ -27,9 +27,9 @@ export const force = {
 	dynes: ratioer(1e-5),
 	dyn: ratioer(1e-5),
 
-	pound: ratioer(lbToN),
-	pounds: ratioer(lbToN),
-	lb: ratioer(lbToN),
+	pound: ratioer(lbToN), // Also in mass family
+	pounds: ratioer(lbToN), // Also in mass family
+	lb: ratioer(lbToN), // Also in mass family
 	lbs: ratioer(lbToN),
 
 	'pound-force': ratioer(lbToN),
